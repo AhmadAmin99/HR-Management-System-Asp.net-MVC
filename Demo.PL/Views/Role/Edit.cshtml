@@ -1,0 +1,24 @@
+﻿@model RoleViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+<h1>Edit User</h1>
+
+<br />
+<br />
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    <div asp-validation-summary="All"></div> @* List All Error Message *@
+    <partial name="PartialViews/CreateEditRolePartial" />
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+    <a asp-action="Index" class="btn btn-light">Back To List</a>
+</form>
+
+@section ValidationScriptSection{
+    <partial name="_ValidationScriptsPartial" />
+    @*  <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script> *@
+}
